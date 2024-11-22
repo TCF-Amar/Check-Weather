@@ -14,9 +14,9 @@ function TodayOtherData() {
   }
 
   return (
-    <div className="bg-[#212c3a] px-8  rounded  flex-1   flex flex-col justify-center">
+    <div className="bg-[#212c3a] px-8  rounded  flex-1   flex flex-col justify-center py-4">
       {/* <p className="text-gray-400 text-sm pt-4 font-semibold">Other Data</p> */}
-      <div className="grid grid-cols-2 gap-y-4 py-8 md:h-[180px]  overflow-hidden overflow-y-auto   ">
+      <div className="grid grid-cols-2 gap-y-4 py-8 md:h-[200px]  overflow-hidden overflow-y-auto   ">
         <div className="w-full flex flex-col items-center">
           <p className="font-semibold text-sm">Humidity</p>
           <p>{weatherData.current.humidity}%</p>

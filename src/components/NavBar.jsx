@@ -11,7 +11,7 @@ function NavBar() {
   const { setShowNav, isShowNav } = useContext(WeatherContext);
 
   return (
-    <div className="w-full bg-navbar-bg flex">
+    <div className="w-full bg-navbar-bg flex z-[9999999]">
       {/* Desktop Navigation */}
       <ul className="md:flex flex-col w-full py-4 items-center gap-4 hidden">
         <NavLink
@@ -40,12 +40,14 @@ function NavBar() {
 
       {/* Small Screen Navigation */}
       <div className="flex justify-between items-center w-full h-full px-2 md:hidden">
-        <NavLink to={"/"} className="font-bold text-2xl text-white">
-          Check Weather.
+        <NavLink to={"/"} className="font-bold text-2xl text-white flex gap-1">
+          <p>Check</p>
+          <p className="text-blue-600"> Weather</p>{" "}
+          <p className="text-blue-900">.</p>
         </NavLink>
         <img
           src={menuIcon}
-          className="w-14 cursor-pointer"
+          className="w-8 cursor-pointer"
           onClick={() => setShowNav(true)}
           alt="Menu Icon"
         />
